@@ -1,0 +1,158 @@
+Ctrl-]		jump to tag
+Ctrl-T		jump back to previous tag
+Ctrl-O		jump front to previous tag
+:		command-line mode
+ZZ		save and exit
+i		insert mode
+a		append mode
+3ax<ESC>	append x 3 times
+A		append mode(at end of line)
+:q<ENTER>	quit
+:q!<ENTER>	quit without saving
+:e!<ENTER>	restore original version
+
+x		delete one char
+dd		delete one line 
+J		remove line break
+u		undo
+U		undo last edited line
+Ctrl-R		redo
+w		start of next word
+b		start of previos word
+e		next end of word
+ge		previous end of word
+$		end of line
+0		first char
+^		first non-blank char
+fx		go to next x
+4fx		go to 4th next x
+Fx		go to previous x
+tx		go before x
+Tx		go previous after x
+%		match parenthesis
+G		go to end
+nG		go to line n
+gg		go to start
+p%		go to p percent
+H		go to high
+M		go to middle
+L		go to last
+g*		partial * search
+g#		partial # search
+
+:set number	show numbers
+:set nonumber	hide numbers
+
+Ctrl-U		move half page down
+Ctrl-D		move half page up
+Ctrl-E		scroll up one line
+Ctrl-Y		scroll down one line
+Ctrl-F		scroll page forward
+Ctrl-B		scroll page backward
+zz		move cursor line to middle
+zt		move cursor line to top
+zb		move cursor line to bottom
+
+/x		search x forward
+?x		search x backward
+n		repeat last search forward
+N		repear last search backward
+
+:set ignorecase		ignore case for search
+:set noignorecase	
+
+*		search for word under cursor(forward)
+#		search for word under cursor(backward)
+/abc\>		search for abc ending word with c
+/\<abc\>	search for abcabc  start with a and end with c
+:nohlsearch	clear highlighting
+``		jump back to and fro
+Ctrl-O		jump backward
+Ctrl-I		jump forward
+
+mx		make mark x
+`x		go to mark x
+:marks		list all marks
+'		mark before doing a jump
+"		mark when last editing was done
+[		mark start of last change
+]		mark end of last change
+
+d4w		delete 4 words	
+d4e		delete 4 words(keeps last char)
+c		change operator(delete and insert)
+cwx		delete 1 word and put x
+dd		delete whole line
+cc		change whole line
+
+x		stands for  dl  (delete character under the cursor)
+X		stands for  dh  (delete character left of the cursor)
+D		stands for  d$  (delete to end of the line)
+C		stands for  c$  (change to end of the line)
+s		stands for  cl  (change one character)
+S		stands for  cc  (change a whole line)
+
+r		replace one char
+R		replace mode
+<times>operator<count>motion
+.		repeats last change
+v		Visual mode
+V		Visual with selecting whole lines
+Ctrl-v		Visual with selecting blocks
+o		move to other corner diagonally(in v mode)
+O		move to other corner in same line (in v mode)
+p		put last deleted or yanked things
+P		put before cursor
+y		yank (copy)
+ye		yank 1 word without last space
+Y or yy		yank whole line
+daw		delete this word
+diw		delete this word(excluding space)
+~		change case of char
+I		insert mode on first non-blank char in line
+
+zfap		Fold a para
+zf		create fold
+zo		open fold
+zc		close fold
+zr		open all folds
+zm		close all folds
+zR		open all nested folds
+zM		close all nested folds
+zn		disable folding
+zN		enable folding
+zi		toggle folding on/off
+zd		delete fold on cursor line
+zD		delete all folds on cursor line
+zO		open all folds on cursor line
+zC		close all folds on cursor 
+set foldcolumn=4	show folds
+
+:edit files
+:w OR :write	save file
+:hide edit files	hide current one and edit another
+:next		open next file
+:wnext		save and next
+:args		where I am
+:previous	move to previous file
+:last		move to last file
+:first		move to first file
+:2next		2 times next
+:set autowrite
+CTRL-^		switch to alternate file
+xy		yank to x register
+"xp		put from x register
+:args files	open files
+
+
+Required settings---------------------------------
+:set number		~nonumber
+:set scrolloff=5
+:set hlsearch		~nohlsearch
+:set incsearch		search while you type
+:set autowrite		~noautowrite
+
+
+To still Read------------------------------------
+03.9	Search patterns
+0.4.8	Text objects

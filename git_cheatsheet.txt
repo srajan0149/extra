@@ -1,0 +1,104 @@
+git config --global user.name "MyName"
+git config --global user.email "email@example.com"
+
+git config --get remote.origin.url <Remote_url>
+
+git init
+
+git clone <URL> <dirname>
+
+git add <filenames>
+
+git rm <filenames>
+	--cached <filenames>	remove from staging
+
+git mv <filenames> <dir_or_name>
+
+git diff
+	--staged OR --cached	what you've staged
+
+git commit
+	-a		stage everything as last time
+	-m <MSG>	Commit message MSG
+	--amend		make additional changes in the last commit
+
+git status
+	-s 		in short
+
+git restore
+	<files>			discard changes in working dir
+	--staged <files>	remove files from staging area
+
+git checkout -- <files>		discard changes in working directory
+
+git log
+	-p		complete diffs
+	-p <n>		show only last n logs
+	-p HEAD..FETCH_HEAD
+	--stat
+	--stat --summary	overview
+	--pretty=[oneline|short|full|fuller]
+	--pretty=format:"%H"
+		%H	Hash
+		%h	abbrev hash
+		%T	tree hash
+		%t	abbrev tree hash
+		%P	Parent hashes
+		%p 	abbrev parent hash
+		%an	Author name
+		%ae	Author email
+		%s	Subject
+	--graph
+	--since=2.weeks
+	-- <path/to/file	show only changes to those files/dirs
+	-<n>		last n commits
+	--grep		show commits with pattern
+
+git branch
+	branch_name
+	-d branch_name		delete branch
+	-D branch_name		force delete branch
+
+git switch another_branch
+
+git merge branch_to_merge_into_current
+
+git pull from_source into_branch
+
+git fetch
+	<remote>
+	<from_source> <into_branch>
+
+git push <remote> <branch>
+	<remote> <tag>		must for pushing tags
+
+git stash
+	-m MSG		add message to stash
+	list
+	show		diff
+	pop x		bring back stash
+	apply		but dont drop them from stash
+	branch 		create new branch out of stash
+	clear
+	drop
+
+git remote
+	-v		show remotes
+	add <alias> <URL>
+	show origin
+	rename <old> <new>
+	remove <remote>
+
+git show [HEAD|<branch_name>|<commit>|<tag>]
+
+git tag			list all tags
+	-l		list all tags
+	-l "pattern"	list tags with pattern
+	-a <tag> -m <MSG>	adds tag with message
+	-a <tag> <commit>	adds tag to commit
+	<tag>		create a lightweight tag
+	-d <tag>	delete tag
+
+git reset --hard HEAD^
+
+git grep text <tag/commit>
